@@ -1,8 +1,10 @@
-#include <stdio.h>
+#include "funcoes.c"
 
 int main()
 {
 
+    Conta contas[MAX_CONTAS];
+    int totalContas = 0;
     int opcao;
 
     do
@@ -25,28 +27,28 @@ int main()
         switch (opcao)
         {
         case 1:
-            printf("inserirConta");
+            inserirConta(contas, &totalContas);
             break;
         case 2:
-            printf("abrirMenuDeAlteracao");
+            abrirMenuDeAlteracao(contas, totalContas);
             break;
         case 3:
-            printf("procurarConta");
+            procurarConta(contas, totalContas);
             break;
         case 4:
-            printf("listar");
+            listar(contas, totalContas);
             break;
         case 5:
-            printf("depositar");
+            depositar(contas, totalContas);
             break;
         case 6:
-            printf("sacar");
+            sacar(contas, totalContas);
             break;
         case 7:
-            printf("imprimir");
+            imprimir(contas, totalContas);
             break;
         case 8:
-            printf("saldoGeral");
+            saldoGeral(contas, totalContas);
             break;
         case 9:
             puts("Saindo do programa.\n");
