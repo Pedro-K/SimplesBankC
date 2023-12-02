@@ -1,6 +1,6 @@
 #include "funcoes.h" /*Inclue a biblioteca funcoes*/
 
-#include <stdio.h> /*Inclue a biblioteca com funções úteis para entrada e saída de dados*/
+#include <stdio.h>  /*Inclue a biblioteca com funções úteis para entrada e saída de dados*/
 #include <string.h> /*Inclue a biblioteca com funções úteis para a manipulação de strings*/
 
 void criarConta(Conta *contas, int *totalContas) /*Essa funcao cria uma nova conta*/
@@ -9,14 +9,14 @@ void criarConta(Conta *contas, int *totalContas) /*Essa funcao cria uma nova con
     if (*totalContas < MAX_CONTAS) /*verifica se a quantidade de contas eh menor que a quantidade maxima de contas*/
     {
 
-        printf("\nDigite o numero da conta: \n"); /*escreve na tela o que esta entre "" e o \n pula linha*/
+        printf("\nDigite o numero da conta: \n");    /*escreve na tela o que esta entre "" e o \n pula linha*/
         verificarNumeroDaConta(contas, totalContas, contas[*totalContas].numero); /*chama a funcao verificarNumeroDaConta passando contas, totalContas, e numero da conta por parametro*/
 
         printf("\nDigite o nome do cliente: \n");
-        
-        fflush(stdin); /*descarrega os buffers de saída de um fluxo de dados*/
+
+        fflush(stdin);                      /*descarrega os buffers de saída de um fluxo de dados*/
         gets(contas[*totalContas].cliente); /*Armazena o nome digitado pelo usuario*/
-        fflush(stdin); /*descarrega os buffers de saída de um fluxo de dados*/
+        fflush(stdin);                      /*descarrega os buffers de saída de um fluxo de dados*/
 
         printf("\nA conta eh especial? (1 para sim, 0 para nao): \n");
         verificarStatusDaConta(contas, totalContas); /*chama a funcao verificarNumeroDaConta passando contas, totalContas por parametro*/
@@ -49,7 +49,7 @@ void verificarNumeroDaConta(Conta *contas, int *contaAtual, int numero) /*Essa f
 
 void verificarStatusDaConta(Conta *contas, int *contaAtual) /*Essa funcao verifica o status da conta*/
 {
-    scanf("%d", &contas[*contaAtual].especial);/*adiciona valor ao saldo da conta*/
+    scanf("%d", &contas[*contaAtual].especial); /*adiciona valor ao saldo da conta*/
 
     while (contas[*contaAtual].especial < 0 || contas[*contaAtual].especial > 1) /*Loop para verifica se o numero digitado eh menor que 0 ou maior que 1*/
     {
@@ -68,14 +68,14 @@ int verificarConta(Conta *contas, int contaAtual) /*Essa funcao verifica se a co
 
     int numero;
     printf("Digite o numero da conta: \n");
-    scanf("%d", &numero);/*pega o dado digitado pelo usuario*/
+    scanf("%d", &numero); /*pega o dado digitado pelo usuario*/
     printf("\n");
 
     int indice = -1;
 
     for (int i = 0; i < contaAtual; i++) /*loop */
     {
-        if (contas[i].numero == numero)/*verifica o numero da conta eh igual ao numero digitado*/
+        if (contas[i].numero == numero) /*verifica o numero da conta eh igual ao numero digitado*/
         {
             indice = i;
             return indice; /*retorna o indice quando a funcao for chamada*/
@@ -88,10 +88,10 @@ void mostrarConta(Conta *contas, int indice) /*Essa funcao mostra os dados da co
 {
 
     printf("Dados da conta:\n");
-    printf("Numero: %d\n", contas[indice].numero); /*mostra o campo numero da conta*/
-    printf("Cliente: %s\n", contas[indice].cliente); /*mostra o nome da conta*/
+    printf("Numero: %d\n", contas[indice].numero);                     /*mostra o campo numero da conta*/
+    printf("Cliente: %s\n", contas[indice].cliente);                   /*mostra o nome da conta*/
     printf("Especial: %s\n", contas[indice].especial ? "Sim" : "Nao"); /*mostra se a conta eh especial ou nao*/
-    printf("Saldo: %.2f\n", contas[indice].saldo); /*mostra o saldo da conta*/
+    printf("Saldo: %.2f\n", contas[indice].saldo);                     /*mostra o saldo da conta*/
 }
 
 void procurarConta(Conta *contas, int contaAtual) /*Essa funcao procura uma conta*/
@@ -103,7 +103,7 @@ void procurarConta(Conta *contas, int contaAtual) /*Essa funcao procura uma cont
     {
         printf("\nConta Existente!\n");
         printf("\nNumero da Conta: %d\n", contas[indice].numero); /*mostra o campo numero da conta*/
-        printf("Nome do Cliente: %s\n", contas[indice].cliente); /*mostra o nome da conta*/
+        printf("Nome do Cliente: %s\n", contas[indice].cliente);  /*mostra o nome da conta*/
     }
     else
     {
@@ -117,8 +117,8 @@ void abrirMenuDeAlteracao(Conta *contas, int contaAtual) /*Essa funcao abre o me
     int opcao;
 
     do
-    {   
-    /*Inicio do Menu de Alteracoes*/
+    {
+        /*Inicio do Menu de Alteracoes*/
         printf("\n==================================================================================================\n");
         printf("\nMenu:\n");
         printf("1. Alterar Nome\n");
@@ -269,7 +269,7 @@ void sacar(Conta *contas, int contaAtual) /*Essa funcao subtrai valores do saldo
 
         if (contas[indice].saldo >= valor)
         {
-            contas[indice].saldo -= valor;/*subtrai valores do saldo da conta*/
+            contas[indice].saldo -= valor; /*subtrai valores do saldo da conta*/
             printf("\nSaque realizado com sucesso!\n");
         }
         else
