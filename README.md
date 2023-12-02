@@ -17,7 +17,8 @@ Projeto SimplesBankC foi feito para o aprendizado da linguagem C, no projeto fin
 O Projeto tem um menu inicial com 9 opções onde você pode criar uma nova conta, fazer alterações nas contas, Procurar por uma conta, Listar as contas,
 Realizar deposito na conta, Realizar saque na conta, Imprimir os dados da conta, Calcular saldo de todas as contas e por fim sair.
 
-Funções Disponiveis:
+## 🖥️ Funções Disponiveis:
+
 
 - void criarConta(contas, totalContas);
 <br>Essa função cria uma nova conta.
