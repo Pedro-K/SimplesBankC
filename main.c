@@ -1,17 +1,18 @@
-#include "funcoes.c"
+#include "funcoes.c" /*Inclue a biblioteca funcoes*/
 
 int main()
 {
 
-    Conta contas[MAX_CONTAS];
-    int totalContas = 0;
-    int opcao;
+    Conta contas[MAX_CONTAS]; /*cria uma variavel do tipo Conta*/
+    int totalContas = 0; /*cria uma variavel do tipo inteiro que mostrara a quantidade de contas*/
+    int opcao = 0; /*cria uma variavel do tipo inteiro que sera usado no menu*/
 
-    do
-    {
+    do/*cria uma loop que so termina quando o usuario digitar "9"*/
+    {   
+        /*Inicio do Menu*/
         puts("==================================================================================================");
         puts("\nMenu:\n");
-        puts("1. Inserir nova conta");
+        puts("1. Criar uma nova conta");
         puts("2. Alterar conta");
         puts("3. Procurar conta");
         puts("4. Listar contas");
@@ -22,33 +23,33 @@ int main()
         puts("9. Sair\n");
 
         puts("Escolha uma opcao:");
-        scanf("%d", &opcao);
+        scanf("%d", &opcao); /*Pega o que numero que o usuario digitou*/
 
         switch (opcao)
         {
         case 1:
-            inserirConta(contas, &totalContas);
+            criarConta(contas, totalContas); /*Chama a funcao criarConta passando contas e totalContas para a funcao por parametro*/
             break;
         case 2:
-            abrirMenuDeAlteracao(contas, totalContas);
+            abrirMenuDeAlteracao(contas, totalContas);/*Chama a funcao abrirMenuDeAlteracao passando contas e totalContas para a funcao por parametro*/
             break;
         case 3:
-            procurarConta(contas, totalContas);
+            procurarConta(contas, totalContas);/*Chama a funcao procurarConta passando contas e totalContas para a funcao por parametro*/
             break;
         case 4:
-            listar(contas, totalContas);
+            listar(contas, totalContas);/*Chama a funcao listar passando contas e totalContas para a funcao por parametro*/
             break;
         case 5:
-            depositar(contas, totalContas);
+            depositar(contas, totalContas);/*Chama a funcao depositar passando contas e totalContas para a funcao por parametro*/
             break;
         case 6:
-            sacar(contas, totalContas);
+            sacar(contas, totalContas);/*Chama a funcao sacar passando contas e totalContas para a funcao por parametro*/
             break;
         case 7:
-            imprimir(contas, totalContas);
+            imprimir(contas, totalContas);/*Chama a funcao imprimir passando contas e totalContas para a funcao por parametro*/
             break;
         case 8:
-            saldoGeral(contas, totalContas);
+            saldoGeral(contas, totalContas);/*Chama a funcao saldoGeral passando contas e totalContas para a funcao por parametro*/
             break;
         case 9:
             puts("Saindo do programa.\n");
@@ -59,5 +60,6 @@ int main()
         puts("\n==================================================================================================\n");
     } while (opcao != 9);
 
+    /*Fim do Menu*/
     return 0;
 }
