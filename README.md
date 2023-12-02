@@ -20,49 +20,49 @@ Realizar deposito na conta, Realizar saque na conta, Imprimir os dados da conta,
 Funções Disponiveis:
 
 - void criarConta(contas, totalContas);
-    Essa função cria uma nova conta.
+<br>Essa função cria uma nova conta.
 
 - void verificarNumeroDaConta(Conta *contas, int *contaAtual, int numero);
-    Essa função verifica o numero da conta
+<br>Essa função verifica o numero da conta
 
 - void verificarStatusDaConta(Conta *contas, int *contaAtual);
-    Essa função verifica o status da conta.
+<br>Essa função verifica o status da conta.
 
 - int verificarConta(Conta *contas, int contaAtual);
-    Essa função verifica se a conta existe ou não.
+<br>Essa função verifica se a conta existe ou não.
 
 - void mostrarConta(Conta *contas, int indice);
-    Essa função mostra os dados da conta.
+<br>Essa função mostra os dados da conta.
 
 - void procurarConta(contas, totalContas);
-    Essa função procura uma conta.
+<br>Essa função procura uma conta.
 
 - void abrirMenuDeAlteracao(contas, totalContas);
-    Essa função abre o menu de alteração.
+<br>Essa função abre o menu de alteração.
 
 - void alterarNome(Conta *contas, int contaAtual);
-    Essa função altera o nome da conta
+<br>Essa função altera o nome da conta
 
 - void alterarNumeroDaConta(Conta *contas, int contaAtual);
-    Essa função altera o numero da conta.
+<br>Essa função altera o numero da conta.
 
 - void alterarStatusDaConta(Conta *contas, int contaAtual);
-    Essa função altera o status da conta.
+<br>Essa função altera o status da conta.
 
 - void listar(contas, totalContas);
-    Essa função lista todas as conta.
+<br>Essa função lista todas as conta.
 
 - void depositar(contas, totalContas);
-    Essa função adiciona valores ao saldo da conta.
+<br>Essa função adiciona valores ao saldo da conta.
 
 - void sacar(contas, totalContas);
-    Essa função subtrai valores do saldo da conta.
+<br>Essa função subtrai valores do saldo da conta.
 
 - void imprimir(contas, totalContas);
-    Essa função exibe a conta.
+<br>Essa função exibe a conta.
 
 - void saldoGeral(contas, totalContas);
-    Essa função soma o saldo de todas as conta.
+<br>Essa função soma o saldo de todas as conta.
 
 ---
 
