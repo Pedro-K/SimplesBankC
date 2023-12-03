@@ -1,7 +1,6 @@
 #include "funcoes.h" /*Inclue a biblioteca funcoes*/
 
 #include <stdio.h>  /*Inclue a biblioteca com funções úteis para entrada e saída de dados*/
-#include <string.h> /*Inclue a biblioteca com funções úteis para a manipulação de strings*/
 
 void criarConta(Conta *contas, int *totalContas) /*Essa funcao cria uma nova conta*/
 {
