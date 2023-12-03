@@ -22,7 +22,6 @@ https://www.youtube.com/watch?v=y3MvQllWahg
 
 ## 🖥️ Funções Disponiveis:
 
-
 - void criarConta(contas, totalContas);
 <br>Essa função cria uma nova conta.
 
@@ -67,6 +66,13 @@ https://www.youtube.com/watch?v=y3MvQllWahg
 
 - void saldoGeral(contas, totalContas);
 <br>Essa função soma o saldo de todas as conta.
+
+## ✉️ Emails para contato:
+
+- Pedro Kleinfelder - pedro.kleinfelder@hotmail.com
+- Rodrigo Mantovani - lancastermantovani@gmail.com
+- Lucas Martins - lucas.v.martins30@gmail.com
+- Pedro Antonio - pedrosantonio07@gmail.com
 
 ---
 
